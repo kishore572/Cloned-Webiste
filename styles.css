@@ -179,3 +179,51 @@ footer{
     margin-left: 46px;
     align-items: center;
 }
+/* Example for a navigation bar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+  }
+  
+  /* Example for a card layout */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap; /* allows cards to wrap on smaller screens */
+    justify-content: center; /* center cards */
+  }
+  
+  .card {
+    flex: 1 1 300px; /* grow, shrink, base width */
+    margin: 10px;
+  }
+  /* For devices with a max width of 768px (tablets and phones) */
+@media (max-width: 768px) {
+    .nav {
+      flex-direction: column; /* Stack navigation items vertically */
+      align-items: flex-start; /* Align to start */
+    }
+  
+    .card {
+      flex: 1 1 100%; /* Cards take full width */
+    }
+  
+    /* Adjust text size */
+    body {
+      font-size: 16px; /* Make text more readable */
+    }
+  }
+  
+  /* For smaller devices (max width of 480px) */
+  @media (max-width: 480px) {
+    .nav {
+      text-align: center; /* Center text */
+    }
+  
+    /* Adjust margins and padding */
+    .card {
+      margin: 5px; /* Smaller margin */
+    }
+  }
+  
